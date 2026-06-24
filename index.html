@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shuree Gantulga — Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F6F3EC;
+    --ink: #1F2A24;
+    --moss: #3F5A45;
+    --moss-light: #6E8A72;
+    --clay: #B7693E;
+    --line: rgba(31, 42, 36, 0.14);
+    --paper: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* Header */
+  header {
+    padding: 80px 0 56px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--moss-light);
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(42px, 7vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+
+  .role {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(20px, 3vw, 26px);
+    color: var(--moss);
+    margin-top: 10px;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 28px;
+    font-size: 14px;
+    color: var(--ink);
+  }
+
+  .contact-row a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--clay);
+    padding-bottom: 1px;
+  }
+
+  .contact-row a:hover { color: var(--clay); }
+
+  /* Sections */
+  section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  section:last-of-type { border-bottom: none; }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .section-num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--clay);
+    font-size: 15px;
+    min-width: 28px;
+  }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: var(--ink);
+  }
+
+  /* About */
+  .about-text {
+    font-size: 17px;
+    max-width: 640px;
+    color: var(--ink);
+  }
+
+  .about-text + .about-text { margin-top: 14px; }
+
+  /* Education / Experience entries */
+  .entry {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 24px;
+    padding: 22px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .entry:first-of-type { border-top: none; }
+
+  .entry-date {
+    font-size: 13px;
+    color: var(--moss-light);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding-top: 2px;
+  }
+
+  .entry-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 19px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .entry-sub {
+    font-size: 14px;
+    color: var(--moss);
+    margin-bottom: 10px;
+  }
+
+  .entry-desc {
+    font-size: 15px;
+    color: var(--ink);
+    opacity: 0.85;
+  }
+
+  .entry-desc ul {
+    margin-top: 6px;
+    padding-left: 18px;
+  }
+
+  .entry-desc li { margin-bottom: 4px; }
+
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 28px;
+  }
+
+  .skill-group-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--moss-light);
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .pill {
+    font-size: 14px;
+    padding: 6px 14px;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    color: var(--ink);
+    background: var(--paper);
+  }
+
+  /* Interests */
+  .interest-line {
+    font-size: 17px;
+    max-width: 640px;
+  }
+
+  .interest-line strong {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    color: var(--moss);
+  }
+
+  /* Footer */
+  footer {
+    padding: 48px 0 80px;
+    font-size: 13px;
+    color: var(--moss-light);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 56px 0 40px; }
+    .entry { grid-template-columns: 1fr; gap: 6px; }
+    .entry-date { padding-top: 0; }
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--clay);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-in {
+      animation: fadeUp 0.6s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="fade-in">
+    <div class="eyebrow">Resume — International Commerce &amp; Business</div>
+    <h1>Shuree<br>Gantulga</h1>
+    <p class="role">Student of global business, builder of small clean ideas</p>
+    <div class="contact-row">
+      <a href="mailto:shuree.gantulga@example.com">shuree.gantulga@example.com</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">github.com/shuree</a>
+      <span>Ulaanbaatar, Mongolia</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2>About</h2>
+    </div>
+    <p class="about-text">I'm a student of International Commerce and Business, currently building a foundation across global trade, market entry strategy, and cross-cultural business — alongside a beginner's grounding in computer engineering and Korean.</p>
+    <p class="about-text">I learn best by testing myself rather than re-reading — I'd rather get something wrong in practice than get it wrong when it counts.</p>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2>Education</h2>
+    </div>
+    <div class="entry">
+      <div class="entry-date">2023 — Present</div>
+      <div>
+        <div class="entry-title">B.A. International Commerce and Business</div>
+        <div class="entry-sub">Coursework in Global Business Strategy</div>
+        <div class="entry-desc">
+          Core focus areas include market entry modes, multinational enterprise strategy, cross-cultural management, labour and CSR issues in globalisation, and the international monetary system.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-grid">
+      <div>
+        <div class="skill-group-label">Languages</div>
+        <div class="pill-row">
+          <span class="pill">Korean (beginner)</span>
+          <span class="pill">English</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-label">Business</div>
+        <div class="pill-row">
+          <span class="pill">Market entry analysis</span>
+          <span class="pill">Country competitiveness analysis</span>
+          <span class="pill">Cross-cultural strategy</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-label">Technical</div>
+        <div class="pill-row">
+          <span class="pill">Intro to computer engineering</span>
+          <span class="pill">Git &amp; GitHub Pages</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2>Interests</h2>
+    </div>
+    <p class="interest-line">Outside of coursework, I formulate my own <strong>perfumes</strong> — currently exploring scent profiles built around soft fruits, creamy florals, warm amber, and vanilla-musk.</p>
+  </section>
+
+  <footer>
+    <span>Shuree Gantulga</span>
+    <span>Built and deployed via GitHub Pages</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
